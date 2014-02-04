@@ -17,6 +17,15 @@ if(NEW_YAMLCPP_FOUND)
 add_definitions(-DHAVE_NEW_YAMLCPP)
 endif(NEW_YAMLCPP_FOUND)
 
+add_service_files(
+  DIRECTORY srv
+  FILES
+  LoadMap.srv
+)
+
+generate_messages(
+)
+
 catkin_package(
     INCLUDE_DIRS
         include
